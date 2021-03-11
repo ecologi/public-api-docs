@@ -13,7 +13,7 @@ servers:
 paths:
   /impact/trees:
     post:
-      summary: Plant Trees
+      summary: Purchase trees
       operationId: create-impact-trees
       description: Use this endpoint to purchase 1 or more trees per request
       security:
@@ -108,7 +108,7 @@ paths:
     parameters: []
   /impact/carbon:
     post:
-      summary: ''
+      summary: Purchase carbon offsets
       operationId: post-impact-carbon
       responses:
         '200':
