@@ -15,7 +15,7 @@ paths:
     parameters:
       - $ref: '#/components/parameters/username'
     get:
-      summary: Fetch total number of trees
+      summary: Get Total Number of Trees
       operationId: get-user-trees
       description: The total number of trees this user has planted.
       responses:
@@ -35,7 +35,7 @@ paths:
     parameters:
       - $ref: '#/components/parameters/username'
     get:
-      summary: Fetch total tonnes of CO2e offset
+      summary: Get Total Tonnes of CO2e Offset
       operationId: get-user-carbon-offset
       description: The total number of tonnes of CO2e emissions has this user offset.
       responses:
@@ -55,7 +55,7 @@ paths:
     parameters:
       - $ref: '#/components/parameters/username'
     get:
-      summary: Fetch total Impact
+      summary: Get Total Impact
       operationId: get-user-impact
       description: 'How many trees has this user planted, and how many tonnes of CO2 emissions have been offset.'
       responses:
