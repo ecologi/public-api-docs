@@ -2,7 +2,10 @@ openapi: 3.0.3
 info:
   title: Reporting API
   version: '1.0'
-  description: Get direct access to your impact stats. You do not need to authorise your requests when using the reporting API.
+  description: |-
+    Get direct access to your impact stats. You do not need to authorise your requests when using the reporting API.
+
+    Click on the "Endpoints" menu item on the left to read more about the APIs for fetching your impact stats.
   contact:
     name: Alex
     email: tech@ecologi.com
