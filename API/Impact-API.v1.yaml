@@ -115,7 +115,7 @@ paths:
       operationId: post-impact-carbon
       responses:
         '200':
-          description: OK
+          description: 'If your request is successful you’ll receive a JSON object containing information about your purchase. Including the amount it cost, the currency billed, the number and unit of the purchase, and a converted tonnes amount.'
           content:
             application/json:
               schema:
