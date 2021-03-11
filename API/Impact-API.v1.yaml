@@ -1,0 +1,219 @@
+openapi: 3.0.3
+info:
+  title: Impact API
+  version: '1.0'
+  description: 'Purchase trees or carbon offsets directly from your application or service with our JSON impact API. You simply tell our API how many trees or offsets you would like to buy. Then, on the 1st of every month, any impact purchased via the API will be added to your next subscription invoice or billed straight away if you don''t have an Ecologi Climate Positive Workforce subscription.'
+  contact:
+    name: Alex
+    url: 'https://ecologi.com'
+    email: tech@ecologi.com
+servers:
+  - url: 'https://public.ecologi.com'
+    description: Production
+paths:
+  /impact/trees:
+    post:
+      summary: Plant Trees
+      operationId: create-impact-trees
+      description: Use this endpoint to purchase 1 or more trees per request
+      security:
+        - API Key: []
+      requestBody:
+        description: |-
+          Send a JSON body object with key "number" and a value equalling the number of trees to plant in your forest for this request. You can optionally add a "name" key, which will be shown when you view the trees in your Ecologi forest.
+
+          Passing "test: true" will return the anticipated response, but you will not be charged for these trees, nor will they show in your Ecologi profile forest.
+        content:
+          application/json:
+            schema:
+              description: ''
+              type: object
+              properties:
+                number:
+                  type: number
+                  minimum: 1
+                  maximum: 250000
+                  description: The number of trees to purchase
+                name:
+                  type: string
+                  minLength: 1
+                  example: Elijah Wood
+                  description: The "funded by" name for these trees
+                test:
+                  type: boolean
+                  description: Whether this is a test transaction or not
+              required:
+                - number
+            examples:
+              Buy trees (live):
+                value:
+                  number: 2
+              Buy trees (test):
+                value:
+                  number: 2
+                  test: true
+              Buy trees with name (test):
+                value:
+                  number: 2
+                  name: Elijah Wood
+                  test: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                description: ''
+                type: object
+                properties:
+                  amount:
+                    type: number
+                    example: 0.38
+                    description: The total cost of this transaction
+                  currency:
+                    type: string
+                    enum:
+                      - GBP
+                      - USD
+                      - EUR
+                      - CAD
+                      - AUD
+                    example: GBP
+                    description: The currency of the amount
+                  treeUrl:
+                    type: string
+                    example: 'https://ecologi.com/test?tree=604a74856345f7001caff578'
+                    description: The URL for the trees you just planted
+                  name:
+                    type: string
+                    example: Elijah Wood
+                    description: The name you passed in the request body
+                required:
+                  - amount
+                  - currency
+                  - treeUrl
+              examples:
+                3 trees purchased:
+                  value:
+                    amount: 0.38
+                    currency: GBP
+                    treeUrl: 'https://ecologi.com/test?tree=604a74856345f7001caff578'
+                    name: Elijah Wood
+          description: 'If your request is successful you’ll receive a JSON object containing information about your purchase. Including the amount it cost, the currency billed, the name (if passed in the request) and the URL of the tree planted in your Ecologi profile forest.'
+      parameters:
+        - schema:
+            type: string
+          in: header
+          name: 'Idempotency-Key: 1234567890'
+          description: This random request key allows you to safely retry requests without accidentally performing the same operation twice.
+    parameters: []
+  /impact/carbon:
+    post:
+      summary: ''
+      operationId: post-impact-carbon
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                description: ''
+                type: object
+                properties:
+                  number:
+                    type: number
+                    description: The number of units you purchased
+                  units:
+                    type: string
+                    enum:
+                      - KG
+                      - Tonnes
+                    description: The type of purchase you made (KG/Tonnes)
+                  numberInTonnes:
+                    type: number
+                    minimum: 0.001
+                    description: The number of units you purchased converted to tonnes
+                  amount:
+                    type: number
+                    example: 7.4
+                    description: The total cost of this transaction
+                  currency:
+                    type: string
+                    enum:
+                      - GBP
+                      - USD
+                      - EUR
+                      - CAD
+                      - AUD
+                    description: The currency of the amount
+                required:
+                  - number
+                  - units
+                  - numberInTonnes
+                  - amount
+                  - currency
+              examples:
+                10KG Transaction response:
+                  value:
+                    number: 10
+                    units: KG
+                    numberInTonnes: 0.01
+                    amount: 37
+                    currency: GBP
+      description: Use this endpoint to purchase 1 or more KG of carbon offsets per request
+      security:
+        - API Key: []
+      parameters:
+        - schema:
+            type: string
+          in: header
+          name: 'Idempotency-Key: 1234567890'
+          description: This random request key allows you to safely retry requests without accidentally performing the same operation twice.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              description: ''
+              type: object
+              properties:
+                number:
+                  type: number
+                  example: 0
+                  description: The number of units to purchase
+                units:
+                  type: string
+                  enum:
+                    - KG
+                    - Tonnes
+                  description: The type of purchase to make (KG/Tonnes)
+                test:
+                  type: boolean
+                  description: Whether this is a test transaction or not
+              required:
+                - number
+                - units
+            examples:
+              Buy offsets (live):
+                value:
+                  number: 10
+                  units: KG
+              Buy offsets (test):
+                value:
+                  number: 10
+                  units: KG
+                  test: true
+        description: |-
+          Send a JSON body object with both "units" and "number" keys for a valid request.
+
+          "units" tells the API that you wish to offsets by the kilogram or tonne.
+
+          "number" should be the value equalling the number of units of carbon offsets to purchase for this request.
+
+          Passing "test: true" will return the anticipated response, but you will not be charged for the offsets, nor will they show on your Ecologi profile.
+
+          Note: the smallest valid amount to purchase is 1KG. If you're using the "Tonnes" unit, 0.001 is the minimum value.
+components:
+  securitySchemes:
+    API Key:
+      type: http
+      scheme: bearer
+      description: 'To authorise your requests, send the "Authorization" header along with an API key using the "Bearer" format.'
