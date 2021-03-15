@@ -2,8 +2,10 @@ openapi: 3.0.3
 info:
   title: Purchasing Impact API
   version: '1.0'
-  description: |-
+  description: |
     Purchase trees or carbon offsets directly from your application or service with our JSON impact API. You simply tell our API how many trees or offsets you would like to buy. Then, on the 1st of every month, any impact purchased via the API will be added to your next subscription invoice or billed straight away if you don't have an Ecologi Climate Positive Workforce subscription.
+
+    If you’d like to create a subscription-free account, head to: https://ecologi.com/impact-only. With an account you can find your API key under 'Settings'.
 
     There is a 25 tree or 1 tonne offset minimum. If you have purchased less than either of these thresholds since your last invoice, your impact will roll over until next month's bill.
 
