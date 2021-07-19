@@ -29,6 +29,8 @@ paths:
         description: |-
           Send a JSON body object with key "number" and a value equalling the number of trees to plant in your forest for this request. You can optionally add a "name" key, which will be shown when you view the trees in your Ecologi forest.
 
+          If your Ecologi profile is public, any personally identifiably information sent in the "name" field (ie. the name of your customer) will also be visible publicily, and therefore you should ask for permission before sending it to us, or shield the user by only sending their first name for example.
+
           Passing "test: true" will return the anticipated response, but you will not be charged for these trees, nor will they show in your Ecologi profile forest.
         content:
           application/json:
@@ -62,7 +64,7 @@ paths:
               Buy trees with name (test):
                 value:
                   number: 2
-                  name: Elijah Wood
+                  name: Alex's trees
                   test: true
       responses:
         '200':
@@ -104,7 +106,7 @@ paths:
                     amount: 0.38
                     currency: GBP
                     treeUrl: 'https://ecologi.com/test?tree=604a74856345f7001caff578'
-                    name: Elijah Wood
+                    name: Alex's trees
           description: 'If your request is successful you’ll receive a JSON object containing information about your purchase. Including the amount it cost, the currency billed, the name (if passed in the request) and the URL of the tree planted in your Ecologi profile forest.'
       parameters:
         - schema:
