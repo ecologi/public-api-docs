@@ -67,7 +67,7 @@ paths:
                   name: Alex's trees
                   test: true
       responses:
-        '200':
+        '201':
           content:
             application/json:
               schema:
@@ -120,7 +120,7 @@ paths:
       summary: Purchase carbon offsets
       operationId: post-impact-carbon
       responses:
-        '200':
+        '201':
           description: 'If your request is successful you’ll receive a JSON object containing information about your purchase. Including the amount it cost, the currency billed, the number and unit of the purchase, and a converted tonnes amount.'
           content:
             application/json:
