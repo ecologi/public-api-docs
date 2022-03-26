@@ -1,7 +1,7 @@
 openapi: 3.0.3
 info:
   title: Purchasing Impact API
-  version: '1.0'
+  version: "1.0"
   description: |
     Purchase trees or carbon offsets directly from your application or service with our JSON impact API. You simply tell our API how many trees or offsets you would like to buy. Then, on the 1st of every month, any impact purchased via the API will be added to your next subscription invoice or billed straight away if you don't have an Ecologi Climate Positive Workforce subscription.
 
@@ -12,10 +12,10 @@ info:
     Click on the "Endpoints" menu item on the left to read more about the APIs for purchasing trees and offsets.
   contact:
     name: Alex
-    url: 'https://ecologi.com'
+    url: "https://ecologi.com"
     email: tech@ecologi.com
 servers:
-  - url: 'https://public.ecologi.com'
+  - url: "https://public.ecologi.com"
     description: Production
 paths:
   /impact/trees:
@@ -31,11 +31,13 @@ paths:
 
           If your Ecologi profile is public, any personally identifiably information sent in the "name" field (ie. the name of your customer) will also be visible publicily, and therefore you should ask for permission before sending it to us, or shield the user by only sending their first name for example.
 
+          If multiple requests are made to plant trees with the same name within 24hrs, they will accumulate on a single tile. If you would like to avoid this you can provide a different name value like maybe adding the first letter of the surname to the next lot or space the requests greater than 24hrs apart.
+
           Passing "test: true" will return the anticipated response, but you will not be charged for these trees, nor will they show in your Ecologi profile forest.
         content:
           application/json:
             schema:
-              description: ''
+              description: ""
               type: object
               properties:
                 number:
@@ -67,11 +69,11 @@ paths:
                   name: Alex's trees
                   test: true
       responses:
-        '201':
+        "201":
           content:
             application/json:
               schema:
-                description: ''
+                description: ""
                 type: object
                 properties:
                   amount:
@@ -90,7 +92,7 @@ paths:
                     description: The currency of the amount
                   treeUrl:
                     type: string
-                    example: 'https://ecologi.com/test?tree=604a74856345f7001caff578'
+                    example: "https://ecologi.com/test?tree=604a74856345f7001caff578"
                     description: The URL for the trees you just planted
                   name:
                     type: string
@@ -105,14 +107,14 @@ paths:
                   value:
                     amount: 0.38
                     currency: GBP
-                    treeUrl: 'https://ecologi.com/test?tree=604a74856345f7001caff578'
+                    treeUrl: "https://ecologi.com/test?tree=604a74856345f7001caff578"
                     name: Alex's trees
-          description: 'If your request is successful you’ll receive a JSON object containing information about your purchase. Including the amount it cost, the currency billed, the name (if passed in the request) and the URL of the tree planted in your Ecologi profile forest.'
+          description: "If your request is successful you’ll receive a JSON object containing information about your purchase. Including the amount it cost, the currency billed, the name (if passed in the request) and the URL of the tree planted in your Ecologi profile forest."
       parameters:
         - schema:
             type: string
           in: header
-          name: 'Idempotency-Key: 1234567890'
+          name: "Idempotency-Key: 1234567890"
           description: This random request key allows you to safely retry requests without accidentally performing the same operation twice.
     parameters: []
   /impact/carbon:
@@ -120,12 +122,12 @@ paths:
       summary: Purchase carbon offsets
       operationId: post-impact-carbon
       responses:
-        '201':
-          description: 'If your request is successful you’ll receive a JSON object containing information about your purchase. Including the amount it cost, the currency billed, the number and unit of the purchase, and a converted tonnes amount.'
+        "201":
+          description: "If your request is successful you’ll receive a JSON object containing information about your purchase. Including the amount it cost, the currency billed, the number and unit of the purchase, and a converted tonnes amount."
           content:
             application/json:
               schema:
-                description: ''
+                description: ""
                 type: object
                 properties:
                   number:
@@ -175,13 +177,13 @@ paths:
         - schema:
             type: string
           in: header
-          name: 'Idempotency-Key: 1234567890'
+          name: "Idempotency-Key: 1234567890"
           description: This random request key allows you to safely retry requests without accidentally performing the same operation twice.
       requestBody:
         content:
           application/json:
             schema:
-              description: ''
+              description: ""
               type: object
               properties:
                 number:
