@@ -37,7 +37,7 @@ _Note: Personal and family plans do not have access to the API services listed b
 
 ### 🌳 Climate Positive Workforce
 
-We offer businesses the opportunity to become a Climate Positive Workforce (CPW). All employees' carbon footprints are more than offset through this subscription. This includes emissions from both their professional and personal lives, including travel, holidays, food, hobbies and everything else! All CPW subscriptions include unlimiated access to our API services listed below.
+We offer businesses the opportunity to become a Climate Positive Workforce (CPW). All employees' carbon footprints are more than offset through this subscription. This includes emissions from both their professional and personal lives, including travel, holidays, food, hobbies and everything else! All CPW subscriptions include unlimited access to our API services listed below.
 
 [Learn more about our Climate Positive Workforce plans](https://ecologi.com/business)
 
