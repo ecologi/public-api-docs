@@ -35,8 +35,6 @@ paths:
 
           If "countryCode" key is present and valid, local trees will be purchased for the specified country. At the moment valid country codes are 'AU', 'UK' and 'US'.
 
-          If "userId" (unique customer identifier) key is present and valid, purchased trees will be attributed to it regardless of the above mentioned 24hrs time window.
-
           Passing "test: true" will return the anticipated response, but you will not be charged for these trees, nor will they show in your Ecologi profile forest.
         content:
           application/json:
@@ -60,11 +58,6 @@ paths:
                   maxLength: 2
                   example: UK
                   description: The country for local trees purchase
-                userId:
-                  type: string
-                  minLength: 1
-                  example: abc1234567890
-                  description: Unique customer identifier
                 test:
                   type: boolean
                   description: Whether this is a test transaction or not
@@ -88,21 +81,6 @@ paths:
                   number: 2
                   name: My UK trees
                   countryCode: UK
-              Buy trees with userId:
-                value:
-                  number: 2
-                  userId: abc01234567890
-              Buy trees with userId and name:
-                value:
-                  number: 2
-                  name: Alex's trees
-                  userId: abc01234567890
-              Buy trees with userId and name (test):
-                value:
-                  number: 2
-                  name: Alex's trees
-                  userId: abc01234567890
-                  test: true
       responses:
         "201":
           content:
@@ -137,10 +115,6 @@ paths:
                     type: string
                     example: ZZ
                     description: The countryCode you passed in the request body or ZZ (Unknown or unspecified country)
-                  userId:
-                    type: string
-                    example: abc1234567890
-                    description: Unique customer identifier
                 required:
                   - amount
                   - currency
@@ -153,7 +127,6 @@ paths:
                     treeUrl: "https://ecologi.com/test?tree=604a74856345f7001caff578"
                     name: Alex's trees
                     countryCode: ZZ
-                    userId: abc1234567890
           description: "If your request is successful you’ll receive a JSON object containing information about your purchase. Including the amount it cost, the currency billed, the name, the country code and the userId (if passed in the request) and the URL of the tree planted in your Ecologi profile forest."
       parameters:
         - schema:
