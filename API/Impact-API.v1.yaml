@@ -33,6 +33,8 @@ paths:
 
           If multiple requests are made to plant trees with the same name within 24hrs, they will accumulate on a single tile. If you would like to avoid this you can provide a different name value like maybe adding the first letter of the surname to the next lot or space the requests greater than 24hrs apart.
 
+          If "countryCode" key is present and valid, local trees will be purchased for the specified country. At the moment valid country codes are 'AU', 'UK' and 'US'.
+
           If "userId" (unique customer identifier) key is present and valid, purchased trees will be attributed to it regardless of the above mentioned 24hrs time window.
 
           Passing "test: true" will return the anticipated response, but you will not be charged for these trees, nor will they show in your Ecologi profile forest.
@@ -52,6 +54,12 @@ paths:
                   minLength: 1
                   example: Elijah Wood
                   description: The "funded by" name for these trees
+                countryCode:
+                  type: string
+                  minLength: 2
+                  maxLength: 2
+                  example: UK
+                  description: The country for local trees purchase
                 userId:
                   type: string
                   minLength: 1
@@ -75,6 +83,11 @@ paths:
                   number: 2
                   name: Alex's trees
                   test: true
+              Buy local trees with name:
+                value:
+                  number: 2
+                  name: My UK trees
+                  countryCode: UK
               Buy trees with userId:
                 value:
                   number: 2
@@ -120,6 +133,10 @@ paths:
                     type: string
                     example: Elijah Wood
                     description: The name you passed in the request body
+                  countryCode:
+                    type: string
+                    example: ZZ
+                    description: The countryCode you passed in the request body or ZZ (Unknown or unspecified country)
                   userId:
                     type: string
                     example: abc1234567890
@@ -135,8 +152,9 @@ paths:
                     currency: GBP
                     treeUrl: "https://ecologi.com/test?tree=604a74856345f7001caff578"
                     name: Alex's trees
+                    countryCode: ZZ
                     userId: abc1234567890
-          description: "If your request is successful you’ll receive a JSON object containing information about your purchase. Including the amount it cost, the currency billed, the name and the userId (if passed in the request) and the URL of the tree planted in your Ecologi profile forest."
+          description: "If your request is successful you’ll receive a JSON object containing information about your purchase. Including the amount it cost, the currency billed, the name, the country code and the userId (if passed in the request) and the URL of the tree planted in your Ecologi profile forest."
       parameters:
         - schema:
             type: string
