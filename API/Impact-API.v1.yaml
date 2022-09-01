@@ -127,7 +127,7 @@ paths:
                     treeUrl: "https://ecologi.com/test?tree=604a74856345f7001caff578"
                     name: Alex's trees
                     countryCode: ZZ
-          description: "If your request is successful you’ll receive a JSON object containing information about your purchase. Including the amount it cost, the currency billed, the name, the country code and the URL of the tree planted in your Ecologi profile forest."
+          description: "If your request is successful you’ll receive a JSON object containing information about your purchase. Including the amount it cost, the currency billed, the name (if passed in the request), the country code and the URL of the tree planted in your Ecologi profile forest."
       parameters:
         - schema:
             type: string
