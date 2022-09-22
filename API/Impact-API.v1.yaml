@@ -24,7 +24,7 @@ paths:
       operationId: create-impact-trees
       description: Use this endpoint to purchase 1 or more trees per request
       security:
-        - API Key: []
+        - API Key: [ ]
       requestBody:
         description: |-
           Send a JSON body object with key "number" and a value equalling the number of trees to plant in your forest for this request. You can optionally add a "name" key, which will be shown when you view the trees in your Ecologi forest.
@@ -87,38 +87,43 @@ paths:
             application/json:
               schema:
                 description: ""
-                type: object
-                properties:
-                  amount:
-                    type: number
-                    example: 0.38
-                    description: The total cost of this transaction
-                  currency:
-                    type: string
-                    enum:
-                      - GBP
-                      - USD
-                      - EUR
-                      - CAD
-                      - AUD
-                    example: GBP
-                    description: The currency of the amount
-                  treeUrl:
-                    type: string
-                    example: "https://ecologi.com/test?tree=604a74856345f7001caff578"
-                    description: The URL for the trees you just planted
-                  name:
-                    type: string
-                    example: Elijah Wood
-                    description: The name you passed in the request body
-                  countryCode:
-                    type: string
-                    example: ZZ
-                    description: The countryCode you passed in the request body or ZZ (Unknown or unspecified country)
-                required:
-                  - amount
-                  - currency
-                  - treeUrl
+                type: array
+                items:
+                  type: object
+                  properties:
+                    amount:
+                      type: number
+                      example: 0.38
+                      description: The total cost of this transaction
+                    currency:
+                      type: string
+                      enum:
+                        - GBP
+                        - USD
+                        - EUR
+                        - CAD
+                        - AUD
+                      example: GBP
+                      description: The currency of the amount
+                    treeUrl:
+                      type: string
+                      example: "https://ecologi.com/test?tree=604a74856345f7001caff578"
+                      description: The URL for the trees you just planted
+                    name:
+                      type: string
+                      example: Elijah Wood
+                      description: The name you passed in the request body
+                    countryCode:
+                      type: string
+                      enum:
+                        - AU
+                        - UK
+                        - US
+                      description: The countryCode you passed in the request body
+                  required:
+                    - amount
+                    - currency
+                    - treeUrl
               examples:
                 3 trees purchased:
                   value:
@@ -126,15 +131,15 @@ paths:
                     currency: GBP
                     treeUrl: "https://ecologi.com/test?tree=604a74856345f7001caff578"
                     name: Alex's trees
-                    countryCode: ZZ
-          description: "If your request is successful you’ll receive a JSON object containing information about your purchase. Including the amount it cost, the currency billed, the name (if passed in the request), the country code and the URL of the tree planted in your Ecologi profile forest."
+                    countryCode: US
+          description: "If your request is successful you’ll receive an array of JSON objects containing information about your purchase. Including the amount it cost, the currency billed, the name (if passed in the request), the country code and the URL of the tree planted in your Ecologi profile forest."
       parameters:
         - schema:
             type: string
           in: header
           name: "Idempotency-Key: 1234567890"
           description: This random request key allows you to safely retry requests without accidentally performing the same operation twice.
-    parameters: []
+    parameters: [ ]
   /impact/carbon:
     post:
       summary: Purchase carbon offsets
@@ -190,7 +195,7 @@ paths:
                     currency: GBP
       description: Use this endpoint to purchase 1 or more KG of carbon offsets per request
       security:
-        - API Key: []
+        - API Key: [ ]
       parameters:
         - schema:
             type: string
