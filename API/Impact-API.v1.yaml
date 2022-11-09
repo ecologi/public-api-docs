@@ -98,17 +98,17 @@ paths:
                     type: string
                     example: Elijah Wood
                     description: The name you passed in the request body
-                  projects:
+                  projectDetails:
                     type: array
                     items:
                       properties:
                         name:
                           type: string
-                        url:
+                        projectUrl:
                           type: string
-                        percentage:
+                        splitPercentage:
                           type: number
-                        amount:
+                        splitAmountTrees:
                           type: number
                 required:
                   - amount
@@ -121,11 +121,11 @@ paths:
                     currency: GBP
                     treeUrl: "https://ecologi.com/test?tree=604a74856345f7001caff578"
                     name: Alex's trees
-                    projects:
+                    projectDetails:
                       - name: "Forest restoration in Kenya"
-                        url: "https://ecologi.com/projects/forest-restoration-in-kenya"
-                        percentage: 100
-                        amount: 2
+                        projectUrl: "https://ecologi.com/projects/forest-restoration-in-kenya"
+                        splitPercentage: 100
+                        splitAmountTrees: 2
           description: "If your request is successful you’ll receive a JSON object containing information about your purchase. Including the amount it cost, the currency billed, the name (if passed in the request), the URL of the tree planted in your Ecologi profile forest and details of the associated projects."
       parameters:
         - schema:
@@ -173,17 +173,17 @@ paths:
                       - CAD
                       - AUD
                     description: The currency of the amount
-                  projects:
+                  projectDetails:
                     type: array
                     items:
                       properties:
                         name:
                           type: string
-                        url:
+                        projectUrl:
                           type: string
-                        percentage:
+                        splitPercentage:
                           type: number
-                        amount:
+                        splitAmountTonnes:
                           type: number
                 required:
                   - number
@@ -199,16 +199,15 @@ paths:
                     numberInTonnes: 0.01
                     amount: 37
                     currency: GBP
-                    projects:
+                    projectDetails:
                       - name: Peatland restoration and conservation in Indonesia
-                        url: https://ecologi.com/projects/peatland-restoration-in-indonesia
-                        percentage: 14,
-                        amount: 0.14
+                        projectUrl: https://ecologi.com/projects/peatland-restoration-in-indonesia
+                        splitPercentage: 14,
+                        splitAmountTonnes: 0.14
                       - name: Converting landfill gas to energy in Northern Turkey
-                        url: https://ecologi.com/projects/converting-landfill-gas-to-energy-turkey
-                        percentage: 86,
-                        amount: 0.86
-
+                        projectUrl: https://ecologi.com/projects/converting-landfill-gas-to-energy-turkey
+                        splitPercentage: 86,
+                        splitAmountTonnes: 0.86
       description: Use this endpoint to purchase 1 or more KG of carbon offsets per request
       security:
         - API Key: []
