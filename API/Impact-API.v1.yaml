@@ -108,7 +108,7 @@ paths:
                     treeUrl:
                       type: string
                       example: "https://ecologi.com/test?tree=604a74856345f7001caff578"
-                      description: The URL for the trees you just planted
+                      description: The URL for the first tree you just planted
                     name:
                       type: string
                       example: Elijah Wood
@@ -120,6 +120,13 @@ paths:
                         - UK
                         - US
                       description: The countryCode you passed in the request body
+                    treeUrls:
+                      type: array
+                      example:
+                        - "https://ecologi.com/test?tree=604a74856345f7001caff578"
+                        - "https://ecologi.com/test?tree=604a74856345f7001caff579"
+                        - "https://ecologi.com/test?tree=604a74856345f7001caff580"
+                      description: URLs of all trees you just planted
                   required:
                     - amount
                     - currency
@@ -132,7 +139,9 @@ paths:
                     treeUrl: "https://ecologi.com/test?tree=604a74856345f7001caff578"
                     name: Alex's trees
                     countryCode: US
-          description: "If your request is successful you’ll receive an array of JSON objects containing information about your purchase. Including the amount it cost, the currency billed, the name (if passed in the request), the country code and the URL of the tree planted in your Ecologi profile forest."
+                    treeUrls:
+                      - "https://ecologi.com/test?tree=604a74856345f7001caff578"
+          description: "If your request is successful you’ll receive a JSON object containing information about your purchase. Including the amount it cost, the currency billed, the name (if passed in the request), the country code, the URL of the first tree planted in your Ecologi profile forest and URLs of all planted trees (if applicable)."
       parameters:
         - schema:
             type: string
