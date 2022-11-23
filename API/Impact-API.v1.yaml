@@ -203,7 +203,7 @@ paths:
                       - name: Peatland restoration and conservation in Indonesia
                         projectUrl: https://ecologi.com/projects/peatland-restoration-in-indonesia
                         splitPercentage: 14,
-                        splitAmountTonnes: 0.14
+                        splitAmountTonnes: 0.0014
                       - name: Converting landfill gas to energy in Northern Turkey
                         projectUrl: https://ecologi.com/projects/converting-landfill-gas-to-energy-turkey
                         splitPercentage: 86,
