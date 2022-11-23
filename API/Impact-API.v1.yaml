@@ -125,7 +125,7 @@ paths:
                       - name: "Forest restoration in Kenya"
                         projectUrl: "https://ecologi.com/projects/forest-restoration-in-kenya"
                         splitPercentage: 100
-                        splitAmountTrees: 2
+                        splitAmountTrees: 3
           description: "If your request is successful you’ll receive a JSON object containing information about your purchase. Including the amount it cost, the currency billed, the name (if passed in the request), the URL of the tree planted in your Ecologi profile forest and details of the associated projects."
       parameters:
         - schema:
