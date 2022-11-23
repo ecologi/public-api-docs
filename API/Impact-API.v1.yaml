@@ -207,7 +207,7 @@ paths:
                       - name: Converting landfill gas to energy in Northern Turkey
                         projectUrl: https://ecologi.com/projects/converting-landfill-gas-to-energy-turkey
                         splitPercentage: 86,
-                        splitAmountTonnes: 0.86
+                        splitAmountTonnes: 0.0086
       description: Use this endpoint to purchase 1 or more KG of carbon offsets per request
       security:
         - API Key: []
