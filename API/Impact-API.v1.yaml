@@ -131,7 +131,7 @@ paths:
         - schema:
             type: string
           in: header
-          name: "Idempotency-Key: 1234567890"
+          name: "Idempotency-Key"
           description: This random request key allows you to safely retry requests without accidentally performing the same operation twice.
     parameters: []
   /impact/carbon:
@@ -215,7 +215,7 @@ paths:
         - schema:
             type: string
           in: header
-          name: "Idempotency-Key: 1234567890"
+          name: "Idempotency-Key"
           description: This random request key allows you to safely retry requests without accidentally performing the same operation twice.
       requestBody:
         content:
