@@ -49,7 +49,7 @@ In an effort to make collective climate action accessible to all businesses, we 
 
 ### 🎁 Gifting
 
-Our zero-waste tree planting gifts allow you to give your love one the gift of long lasting climate action. Choose from planting 100, 250 or 500 trees..
+Our zero-waste tree planting gifts allow you to give your love one the gift of long lasting climate action. Choose from planting 100, 250 or 500 trees.
 
 [Find out more about our gifts](https://ecologi.com/gifting)
 
