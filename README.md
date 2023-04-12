@@ -8,7 +8,7 @@ By bringing a community together to help restore our planet, we strive to create
 
 ### 📉 Carbon reduction projects
 
-You will fund the world's best climate crisis solutions. Our climate projects include renewable energy generation, rainforest protection, and community initiatives such as providing access to clean water. 
+You will fund the world's best climate crisis solutions. Our climate projects include renewable energy generation, rainforest protection, and community initiatives such as providing access to clean water.
 
 Each and every tonne of carbon that we offset through these climate projects is certified by an industry-leading formal standard, such as Gold Standard or Verified Carbon Standard and we monitor our impact across all the projects we have funded.
 
@@ -16,7 +16,7 @@ Each and every tonne of carbon that we offset through these climate projects is 
 
 ### 🌱 Tree-planting
 
-Our main tree planting sites are in Madagascar, Mozambique and Nicaragua. We plant a native and biodiverse mix of tree species and our planting projects help to support local communities and reduce poverty by employing local workers. 
+Our main tree planting sites are in Madagascar, Mozambique and Nicaragua. We plant a native and biodiverse mix of tree species and our planting projects help to support local communities and reduce poverty by employing local workers.
 We also offer local reforestation projects in the UK, Australia, and the US, where you can fund trees in your own country.
 
 These baby trees grow to support communities and wildlife, improve soil and water quality, and boost the biodiversity of the local area.
@@ -49,24 +49,25 @@ In an effort to make collective climate action accessible to all businesses, we 
 
 ### 🎁 Gifting
 
-Our zero-waste and climate positive gifts allow you to give your loved one the gift of long lasting climate action. Choose from tree gifts (planting 100, 250 or 500 trees) and climate action gifts (3, 6 or 12 month subscriptions). 
+Our zero-waste tree planting gifts allow you to give your love one the gift of long lasting climate action. Choose from planting 100, 250 or 500 trees..
 
 [Find out more about our gifts](https://ecologi.com/gifting)
 
 ## Ecologi APIs
 
-Our APIs provide a simple and easy-to-use way for you to automate the purchase of trees or carbon offsets directly from your application or service. You can also use our APIs to directly access your impact statistics and gain real-time insights and data on your total impact, total tonnes of CO2e removed, and total number of trees planted. 
+Our APIs provide a simple and easy-to-use way for you to automate the purchase of trees or carbon offsets directly from your application or service. You can also use our APIs to directly access your impact statistics and gain real-time insights and data on your total impact, total tonnes of CO2e removed, and total number of trees planted.
 
-| Purchasing Impact  API | Reporting API                     |
-|------------------------|-----------------------------------|
-| Buy trees              | Get all impact                    |
-| Buy carbon offsets     | Get total tonnes of Co2e removed  |
-|                        | Get total number of trees planted |
+| Purchasing Impact API | Reporting API                     |
+| --------------------- | --------------------------------- |
+| Buy trees             | Get all impact                    |
+| Buy carbon offsets    | Get total tonnes of Co2e removed  |
+|                       | Get total number of trees planted |
 
 <!-- theme: success -->
 
 > ### Read the docs
-> ⬅️ Select the **Public API Docs** menu item on the left to get started. 
+>
+> ⬅️ Select the **Public API Docs** menu item on the left to get started.
 
 ### ⚡️ Shopify and Zapier integrations
 
@@ -74,7 +75,7 @@ We have plugins for both Shopify and Zapier, allowing you to fund reforestation 
 
 [Read more about our integrations](https://ecologi.com/articles/product/automatic-tree-planting-via-shopify)
 
-## We’re here to help 
+## We’re here to help
 
 If you have any questions, please get in touch and let us know how we can help at [support@ecologi.com](mailto:support@ecologi.com).
 
