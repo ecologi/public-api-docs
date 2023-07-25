@@ -1,73 +1,69 @@
 openapi: 3.0.3
 info:
   title: Reporting API
-  version: '1.0'
+  version: "1.0"
   description: |-
     Get direct access to your impact stats. You do not need to authorise your requests when using the reporting API.
 
     Click on the "Endpoints" menu item on the left to read more about the APIs for fetching your impact stats.
-  contact:
-    name: Alex
-    email: tech@ecologi.com
-    url: 'https://ecologi.com'
 servers:
-  - url: 'https://public.ecologi.com'
+  - url: "https://public.ecologi.com"
     description: Production
 paths:
-  '/users/{username}/trees':
+  "/users/{username}/trees":
     parameters:
-      - $ref: '#/components/parameters/username'
+      - $ref: "#/components/parameters/username"
     get:
       summary: Get Total Number of Trees
       operationId: get-user-trees
       description: The total number of trees this user has planted.
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
               schema:
-                description: ''
+                description: ""
                 type: object
                 properties:
                   total:
                     type: number
                 required:
                   - total
-  '/users/{username}/carbon-offset':
+  "/users/{username}/carbon-offset":
     parameters:
-      - $ref: '#/components/parameters/username'
+      - $ref: "#/components/parameters/username"
     get:
       summary: Get Total Tonnes of CO2e Offset
       operationId: get-user-carbon-offset
       description: The total number of tonnes of CO2e emissions has this user offset.
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
               schema:
-                description: ''
+                description: ""
                 type: object
                 properties:
                   total:
                     type: number
                 required:
                   - total
-  '/users/{username}/impact':
+  "/users/{username}/impact":
     parameters:
-      - $ref: '#/components/parameters/username'
+      - $ref: "#/components/parameters/username"
     get:
       summary: Get Total Impact
       operationId: get-user-impact
-      description: 'How many trees has this user planted, and how many tonnes of CO2 emissions have been offset.'
+      description: "How many trees has this user planted, and how many tonnes of CO2 emissions have been offset."
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
               schema:
-                description: ''
+                description: ""
                 type: object
                 properties:
                   trees:
