@@ -45,7 +45,7 @@ We offer businesses the opportunity to become a Climate Positive Workforce (CPW)
 
 In an effort to make collective climate action accessible to all businesses, we offer what we call an "Impact Only" Ecologi account. Rather than a subscription you can add climate impact whenever suits you. You'll have full access to the API and integrations listed below if you wish to automate your climate impact, or you can buy it at any time from your Ecologi profile.
 
-[Get started today with an Impact-Only account](https://ecologi.com/impact-only)
+[Get started today with an Impact-Only account](https://ecologi.com/pay-as-you-go)
 
 ### 🎁 Gifting
 
