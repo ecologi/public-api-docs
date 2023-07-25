@@ -58,7 +58,7 @@ Our zero-waste tree planting gifts allow you to give your love one the gift of l
 Our APIs provide a simple and easy-to-use way for you to automate the purchase of trees or carbon offsets directly from your application or service. You can also use our APIs to directly access your impact statistics and gain real-time insights and data on your total impact, total tonnes of CO2e removed, and total number of trees planted.
 
 | Purchasing Impact API | Reporting API                     |
-|-----------------------|-----------------------------------|
+| --------------------- | --------------------------------- |
 | Buy trees             | Get all impact                    |
 | Buy carbon offsets    | Get total tonnes of Co2e removed  |
 |                       | Get total number of trees planted |
