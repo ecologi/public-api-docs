@@ -3,13 +3,13 @@ info:
   title: Purchasing Impact API
   version: "1.0"
   description: |
-    Purchase trees or carbon offsets directly from your application or service with our JSON impact API. You simply tell our API how many trees or offsets you would like to buy. Then, on the 1st of every month, any impact purchased via the API will be added to your next subscription invoice or billed straight away if you don't have an Ecologi Climate Positive Workforce subscription.
+    Purchase trees or carbon avoidance credits directly from your application or service with our JSON impact API. You simply tell our API how many trees or credits you would like to buy. Then, on the 1st of every month, any impact purchased via the API will be added to your next subscription invoice or billed straight away if you don't have an Ecologi Climate Action Workforce subscription.
 
     If you’d like to create a subscription-free account, head to: https://ecologi.com/pay-as-you-go. With an account you can find your API key on the 'Impact API' page.
 
-    There is a billing minimum of 25 trees or 1 tonne of offsets. If you have purchased less than either of these thresholds since your most recent invoice, your impact will roll over to next month's invoice.
+    There is a billing minimum of 25 trees or 1 tonne of carbon avoidance. If you have purchased less than either of these thresholds since your most recent invoice, your impact will roll over to next month's invoice.
 
-    Click on the "Endpoints" menu item on the left to read more about the APIs for purchasing trees and offsets.
+    Click on the "Endpoints" menu item on the left to read more about the APIs for purchasing trees and carbon avoidance credits.
 servers:
   - url: "https://public.ecologi.com"
     description: Production
@@ -132,7 +132,7 @@ paths:
     parameters: []
   /impact/carbon:
     post:
-      summary: Purchase carbon offsets
+      summary: Purchase carbon avoidance
       operationId: post-impact-carbon
       responses:
         "201":
@@ -204,7 +204,7 @@ paths:
                         projectUrl: https://ecologi.com/projects/converting-landfill-gas-to-energy-turkey
                         splitPercentage: 86,
                         splitAmountTonnes: 0.0086
-      description: Use this endpoint to purchase 1 or more KG of carbon offsets per request
+      description: Use this endpoint to purchase 1 or more kilogram of carbon avoidance credits per request
       security:
         - API Key: []
       parameters:
@@ -237,11 +237,11 @@ paths:
                 - number
                 - units
             examples:
-              Buy offsets (live):
+              Buy credits (live):
                 value:
                   number: 10
                   units: KG
-              Buy offsets (test):
+              Buy credits (test):
                 value:
                   number: 10
                   units: KG
@@ -249,13 +249,13 @@ paths:
         description: |-
           Send a JSON body object with both "units" and "number" keys for a valid request.
 
-          "units" tells the API that you wish to offsets by the kilogram or tonne.
+          "units" tells the API that you wish to purchase credits by the kilogram or tonne.
 
-          "number" should be the value equalling the number of units of carbon offsets to purchase for this request.
+          "number" should be the value equaling the number of units of carbon credits to purchase for this request.
 
-          Passing "test: true" will return the anticipated response, but you will not be charged for the offsets, nor will they show on your Ecologi profile.
+          Passing "test: true" will return the anticipated response, but you will not be charged for the credits, nor will they show on your Ecologi profile.
 
-          Note: the smallest valid amount to purchase is 1KG. If you're using the "Tonnes" unit, 0.001 is the minimum value.
+          Note: the smallest valid amount to purchase is 1kg. If you're using the "Tonnes" unit, 0.001 is the minimum value.
 components:
   securitySchemes:
     API Key:
