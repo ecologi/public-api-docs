@@ -3,7 +3,7 @@ info:
   title: Purchasing Impact API
   version: "1.0"
   description: |
-    Purchase trees or carbon avoidance credits directly from your application or service with our JSON impact API. You simply tell our API how many trees or credits you would like to buy. Any impact purchased via the API will be billed on the 1st of every month.
+    Purchase trees or carbon avoidance credits directly from your application or service with our JSON impact API. You simply tell our API how many trees or credits you would like to buy. Any impact purchased via the API will be billed on the 1st of every month, with impact applied following sucessful payment.
 
     If you’d like to create a subscription-free account, head to: https://ecologi.com/pay-as-you-go. With an account you can find your API key on the 'Impact API' page.
 
@@ -122,7 +122,7 @@ paths:
                         projectUrl: "https://ecologi.com/projects/forest-restoration-in-kenya"
                         splitPercentage: 100
                         splitAmountTrees: 3
-          description: "If your request is successful you’ll receive a JSON object containing information about your purchase. Including the amount it cost, the currency billed, the name (if passed in the request), the URL of the tree planted in your Ecologi profile forest and details of the associated projects."
+          description: "If your request is successful you’ll receive a JSON object containing information about your purchase. Including the amount it cost, the currency billed, the name (if passed in the request), the URL of the pending tree in your Ecologi profile forest and details of the associated projects."
       parameters:
         - schema:
             type: string
