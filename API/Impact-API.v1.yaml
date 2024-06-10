@@ -3,7 +3,7 @@ info:
   title: Purchasing Impact API
   version: "1.0"
   description: |
-    Purchase trees or carbon avoidance credits directly from your application or service with our JSON impact API. You simply tell our API how many trees or credits you would like to buy. Any purchases made via the API will be billed on the 1st of every month, with impact applied following sucessful payment.
+    Purchase trees or carbon avoidance credits directly from your application or service with our JSON impact API. You simply tell our API how many trees or credits you would like to buy. Any purchases made via the API will be billed on the 1st of every month, with impact applied following successful payment.
 
     If you’d like to create a subscription-free account, head to: https://ecologi.com/pay-as-you-go. With an account you can find your API key on the 'Impact API' page.
 
