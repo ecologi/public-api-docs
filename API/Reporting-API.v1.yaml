@@ -81,6 +81,6 @@ components:
       required: true
       schema:
         type: string
-        example: lucy
+        example: business-name
       description: Your Ecologi username
   schemas: {}
