@@ -44,7 +44,7 @@ paths:
                 name:
                   type: string
                   minLength: 1
-                  example: Elijah Wood
+                  example: Our valued customer 'X' for order 'Y'
                   description: The "funded by" name for these trees
                 test:
                   type: boolean
@@ -62,7 +62,7 @@ paths:
               Buy trees with name (test):
                 value:
                   number: 2
-                  name: Alex's trees
+                  name: Our valued customer 'X' for order 'Y'
                   test: true
       responses:
         "201":
@@ -92,7 +92,7 @@ paths:
                     description: The URL for the trees you just planted
                   name:
                     type: string
-                    example: Elijah Wood
+                    example: Our valued customer 'X' for order 'Y'
                     description: The name you passed in the request body
                   projectDetails:
                     type: array
@@ -116,7 +116,7 @@ paths:
                     amount: 0.38
                     currency: GBP
                     treeUrl: "https://ecologi.com/test?tree=604a74856345f7001caff578"
-                    name: Alex's trees
+                    name: Our valued customer 'X' for order 'Y'
                     projectDetails:
                       - name: "Forest restoration in Kenya"
                         projectUrl: "https://ecologi.com/projects/forest-restoration-in-kenya"
