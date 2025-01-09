@@ -74,7 +74,7 @@ paths:
                 properties:
                   amount:
                     type: number
-                    example: 0.38
+                    example: 1.80
                     description: The total cost of this transaction
                   currency:
                     type: string
@@ -113,7 +113,7 @@ paths:
               examples:
                 3 trees purchased:
                   value:
-                    amount: 0.38
+                    amount: 1.80
                     currency: GBP
                     treeUrl: "https://ecologi.com/test?tree=604a74856345f7001caff578"
                     name: Our valued customer 'X' for order 'Y'
@@ -193,7 +193,7 @@ paths:
                     number: 10
                     units: KG
                     numberInTonnes: 0.01
-                    amount: 37
+                    amount: 0.09
                     currency: GBP
                     projectDetails:
                       - name: Peatland restoration and conservation in Indonesia
