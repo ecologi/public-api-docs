@@ -158,7 +158,7 @@ paths:
                     description: The number of units you purchased converted to tonnes
                   amount:
                     type: number
-                    example: 7.4
+                    example: 0.09
                     description: The total cost of this transaction
                   currency:
                     type: string
