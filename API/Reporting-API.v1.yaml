@@ -28,8 +28,12 @@ paths:
                 properties:
                   total:
                     type: number
-                required:
-                  - total
+                    description: All paid trees for this user
+                    example: 16348
+                  pending:
+                    type: number
+                    description: All unpaid trees for this user
+                    example: 871
   "/users/{username}/carbon-offset":
     parameters:
       - $ref: "#/components/parameters/username"
@@ -48,8 +52,12 @@ paths:
                 properties:
                   total:
                     type: number
-                required:
-                  - total
+                    description: All paid carbon avoidance for this user
+                    example: 187.4
+                  pending:
+                    type: number
+                    description: All unpaid carbon avoidance for this user
+                    example: 14.9
   "/users/{username}/impact":
     parameters:
       - $ref: "#/components/parameters/username"
@@ -68,11 +76,22 @@ paths:
                 properties:
                   trees:
                     type: number
+                    description: All paid trees for this user
+                    example: 16348
                   carbonOffset:
                     type: number
-                required:
-                  - trees
-                  - carbonOffset
+                    description: All paid carbon avoidance for this user
+                    example: 187.4
+                  pending:
+                    type: object
+                    description: All unpaid impact for this user
+                    properties:
+                      trees:
+                        type: number
+                        example: 871
+                      carbonOffset:
+                        type: number
+                        example: 14.9
 components:
   parameters:
     username:
