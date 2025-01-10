@@ -9,7 +9,7 @@ info:
 
     There is a billing minimum of 25 trees or 1 tonne of carbon avoidance. If you have purchased less than either of these thresholds since your most recent invoice, your impact will roll over to next month's invoice.
 
-    Click on the "Endpoints" menu item on the left to read more about the APIs for purchasing trees and carbon avoidance credits.
+    Click on an item from the menu on the left to explore the available endpoints.
 servers:
   - url: "https://public.ecologi.com"
     description: Production

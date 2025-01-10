@@ -3,9 +3,9 @@ info:
   title: Reporting API
   version: "1.0"
   description: |-
-    Get direct access to your impact stats. You do not need to authorise your requests when using the reporting API.
+    Get direct access to your impact totals, which refresh every 10 minutes. Requests to the reporting API do not require authorisation.
 
-    Click on the "Endpoints" menu item on the left to read more about the APIs for fetching your impact stats.
+    Click on an item from the menu on the left to explore the available endpoints.
 servers:
   - url: "https://public.ecologi.com"
     description: Production
@@ -16,7 +16,7 @@ paths:
     get:
       summary: Get Total Number of Trees
       operationId: get-user-trees
-      description: The total number of trees this user has funded.
+      description: The total number of trees this user has funded. Data refreshes every 10 minutes.
       responses:
         "200":
           description: OK
@@ -36,7 +36,7 @@ paths:
     get:
       summary: Get Total Tonnes of CO2e avoided
       operationId: get-user-carbon-offset
-      description: The total number of tonnes of emissions this user has avoided.
+      description: The total number of tonnes of emissions this user has avoided. Data refreshes every 10 minutes.
       responses:
         "200":
           description: OK
@@ -56,7 +56,7 @@ paths:
     get:
       summary: Get Total Impact
       operationId: get-user-impact
-      description: "How many trees has this user funded, and how many tonnes of emissions have been avoided."
+      description: "A combination of how many trees this user has funded and how many tonnes of emissions have been avoided, in a single request. Data refreshes every 10 minutes."
       responses:
         "200":
           description: OK
