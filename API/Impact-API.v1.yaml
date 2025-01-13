@@ -3,11 +3,11 @@ info:
   title: Purchasing Impact API
   version: "1.0"
   description: |
-    Purchase trees or carbon avoidance credits directly from your application or service with our JSON impact API. You simply tell our API how many trees or credits you would like to buy. Any purchases made via the API will be billed on the 1st of every month, with impact applied following successful payment.
+    Purchase trees or carbon avoidance credits directly from your application or service with our JSON impact API. You simply tell our API how many trees or credits you would like to buy. Any purchases made via the API will be billed on the 1st of every month, with impact being applied to the profile in a pending state until successful payment.
 
     If you’d like to create a subscription-free account, head to: https://ecologi.com/pay-as-you-go. With an account you can find your API key on the 'Impact API' page.
 
-    There is a billing minimum of 25 trees or 1 tonne of carbon avoidance. If you have purchased less than either of these thresholds since your most recent invoice, your impact will roll over to next month's invoice.
+    We have a minimum billing amount of £3 (or the equivalent in your set currency). If your purchases are below this threshold since your last invoice, your impact will roll over to next month’s invoice.
 
     Click on an item from the menu on the left to explore the available endpoints.
 servers:
