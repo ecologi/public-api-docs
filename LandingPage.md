@@ -18,8 +18,6 @@ Each and every tonne is certified by industry-leading standards, such as the [Go
 
 We fund the planting of trees all over the world through our [trusted reforestation partners](https://ecologi.com/articles/blog/get-to-know-our-reforestation-partners). Working in conjunction with organisations that plant a diverse mix of ecologically-appropriate species, these projects enhance local biodiversity and help to support local communities through direct employment, gender empowerment, education and stewardship opportunities. We support planting sites in around 15 countries, which means that your funding is divided between our active projects across the world. Find out more about tree locations [here](https://ecologi.com/articles/blog/where-are-my-trees).
 
-We also offer the option to support local reforestation projects in Australia, Brazil, the UK and the US, where you can fund trees specifically in these countries.
-
 ---
 
 _[Have a look at our supported carbon avoidance and reforestation projects](https://ecologi.com/projects)_
