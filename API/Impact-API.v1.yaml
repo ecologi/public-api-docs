@@ -284,7 +284,7 @@ paths:
     post:
       summary: Purchase carbon removals
       operationId: post-impact-carbon-removal
-      description: Use this endpoint to purchase carbon removal credits. Carbon removals actively remove CO2 from the atmosphere through projects like biochar and enhanced rock weathering. The unit of purchase is kilograms (KG).
+      description: Use this endpoint to purchase carbon removal credits. Carbon removals actively remove CO₂e from the atmosphere through projects like biochar and enhanced rock weathering. The unit of purchase is kilograms (KG).
       security:
         - API Key: []
       parameters:
@@ -330,7 +330,7 @@ paths:
         description: |-
           Send a JSON body object with a "number" key representing the amount of carbon removal in kilograms (KG) you wish to purchase.
 
-          The number must be a positive integer representing kilograms of CO2 to be removed from the atmosphere.
+          The number must be a positive integer representing kilograms of CO₂e to be removed from the atmosphere.
 
           You can optionally add a "name" key, which will be shown as the "funded by" name when viewing this impact on your Ecologi profile.
 

@@ -44,7 +44,7 @@ paths:
     parameters:
       - $ref: "#/components/parameters/username"
     get:
-      summary: Get total tonnes of CO2e avoided
+      summary: Get total tonnes of CO₂e avoided
       operationId: get-user-carbon-offset
       description: The total number of tonnes of emissions this user has avoided. Data refreshes every 10 minutes.
       responses:
@@ -68,9 +68,9 @@ paths:
     parameters:
       - $ref: "#/components/parameters/username"
     get:
-      summary: Get total tonnes of CO2e removed
+      summary: Get total tonnes of CO₂e removed
       operationId: get-user-carbon-removal
-      description: The total number of tonnes of CO2e this user has permanently removed from the atmosphere. Data refreshes every 10 minutes.
+      description: The total number of tonnes of CO₂e this user has permanently removed from the atmosphere. Data refreshes every 10 minutes.
       responses:
         "200":
           description: OK
