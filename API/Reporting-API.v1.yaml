@@ -3,7 +3,13 @@ info:
   title: Reporting API
   version: "1.0"
   description: |-
-    Get direct access to your impact totals, which refresh every 10 minutes. Requests to the reporting API do not require authorisation.
+    Get direct access to your impact totals, which refresh every 10 minutes. Requests to the reporting API do not require authorisation. You can request the following totals:
+
+    - Total trees funded
+    - Total carbon avoidance funded
+    - Total carbon removals funded
+    - Total habitat restoration funded
+    - Total combined impact
 
     Click on an item from the menu on the left to explore the available endpoints.
 servers:
@@ -14,7 +20,7 @@ paths:
     parameters:
       - $ref: "#/components/parameters/username"
     get:
-      summary: Get Total Number of Trees
+      summary: Get total number of trees
       operationId: get-user-trees
       description: The total number of trees this user has funded. Data refreshes every 10 minutes.
       responses:
@@ -38,7 +44,7 @@ paths:
     parameters:
       - $ref: "#/components/parameters/username"
     get:
-      summary: Get Total Tonnes of CO2e avoided
+      summary: Get total tonnes of CO2e avoided
       operationId: get-user-carbon-offset
       description: The total number of tonnes of emissions this user has avoided. Data refreshes every 10 minutes.
       responses:
@@ -58,13 +64,61 @@ paths:
                     type: number
                     description: All unpaid carbon avoidance for this user
                     example: 14.9
+  "/users/{username}/carbon-removal":
+    parameters:
+      - $ref: "#/components/parameters/username"
+    get:
+      summary: Get total tonnes of CO2e removed
+      operationId: get-user-carbon-removal
+      description: The total number of tonnes of CO2e this user has permanently removed from the atmosphere. Data refreshes every 10 minutes.
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                description: ""
+                type: object
+                properties:
+                  total:
+                    type: number
+                    description: All paid carbon removal for this user (in tonnes)
+                    example: 2.5
+                  pending:
+                    type: number
+                    description: All unpaid carbon removal for this user (in tonnes)
+                    example: 0.5
+  "/users/{username}/habitat-restoration":
+    parameters:
+      - $ref: "#/components/parameters/username"
+    get:
+      summary: Get total habitat restored
+      operationId: get-user-habitat-restoration
+      description: The total area of habitat and ecosystem this user has restored. Data refreshes every 10 minutes.
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                description: ""
+                type: object
+                properties:
+                  total:
+                    type: number
+                    description: All paid habitat restoration for this user (in m²)
+                    example: 150
+                  pending:
+                    type: number
+                    description: All unpaid habitat restoration for this user (in m²)
+                    example: 25
   "/users/{username}/impact":
     parameters:
       - $ref: "#/components/parameters/username"
     get:
-      summary: Get Total Impact
+      summary: Get total impact
       operationId: get-user-impact
-      description: "A combination of how many trees this user has funded and how many tonnes of emissions have been avoided, in a single request. Data refreshes every 10 minutes."
+      description: "A combination of all impact types this user has funded: trees, carbon avoidance, carbon removal, and habitat restoration, in a single request. Data refreshes every 10 minutes."
       responses:
         "200":
           description: OK
@@ -80,8 +134,16 @@ paths:
                     example: 16348
                   carbonOffset:
                     type: number
-                    description: All paid carbon avoidance for this user
+                    description: All paid carbon avoidance (in tonnes) for this user
                     example: 187.4
+                  carbonRemoval:
+                    type: number
+                    description: All paid carbon removal (in tonnes) for this user
+                    example: 2.5
+                  habitatRestoration:
+                    type: number
+                    description: All paid habitat restoration (in m²) for this user
+                    example: 150
                   pending:
                     type: object
                     description: All unpaid impact for this user
@@ -92,6 +154,24 @@ paths:
                       carbonOffset:
                         type: number
                         example: 14.9
+                      carbonRemoval:
+                        type: number
+                        example: 0.5
+                      habitatRestoration:
+                        type: number
+                        example: 25
+              examples:
+                User impact totals:
+                  value:
+                    trees: 16348
+                    carbonOffset: 187.4
+                    carbonRemoval: 2.5
+                    habitatRestoration: 150
+                    pending:
+                      trees: 871
+                      carbonOffset: 14.9
+                      carbonRemoval: 0.5
+                      habitatRestoration: 25
 components:
   parameters:
     username:

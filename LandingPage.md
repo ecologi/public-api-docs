@@ -1,51 +1,40 @@
-# Automated climate action with Ecologi
+# Ecologi API
 
-Ecologi is a climate action platform, on a mission to inspire and empower businesses to contribute to global climate action. We’ve developed a suite of products to enable climate action along the net-zero journey. Gain insight into your business’ emissions with our free carbon footprint calculator, support carbon avoidance and removal projects, and fund the planting of trees around the world to restore nature and support local communities.
+Ecologi is a climate action platform helping businesses take measurable, credible action for climate and nature.
 
-To find out more about us, take a look at our [main site](https://ecologi.com/).
+Our APIs make it easy to embed climate action directly into your product or service—whether that's funding climate and nature projects automatically or reporting impact back to your users in real time.
 
-By bringing businesses together to take meaningful climate action, we strive to create real positive change.
+Ecologi supports businesses across the net-zero journey with transparent, high-quality projects and clear, auditable reporting.
 
-## Types of automated climate action ✊
+## Impact projects
 
-### 📉 Carbon avoidance projects
+With the Ecologi API, you can fund a variety of rigorously vetted climate and nature projects:
 
-The high-quality carbon avoidance projects we support cover a variety of project types, including rainforest protection, and community-based initiatives such as providing access to clean water and fuel-efficient cookstoves.
+- **Tree planting** – restore degraded land with diverse, ecologically appropriate species
+- **Carbon avoidance** – prevent emissions, e.g., rainforest protection, clean energy, or community initiatives
+- **Carbon removals** – certified projects that permanently remove CO₂e from the atmosphere, such as biochar or enhanced rock weathering
+- **Habitat restoration** – protect and regenerate ecosystems while supporting communities, e.g., wildflower or seagrass restoration
 
-Each and every tonne is certified by industry-leading standards, such as the [Gold Standard](https://ecologi.com/articles/blog/what-is-the-gold-standard-carbon-offset) or [Verified Carbon Standard](https://ecologi.com/articles/blog/what-is-the-verified-carbon-standard), and we monitor our impact across all the projects we have funded. When choosing projects, we’re guided by our science-based [Impact Regionalisation Strategy](https://ecologi-assets.s3.eu-west-1.amazonaws.com/files/Ecologi-Impact-Strategy.pdf), which ensures we’re supporting project types in countries that will have the most impact.
+All projects meet stringent climate, nature, and social criteria. For each impact type, we assign a nominated project that you support via the API, and we periodically rotate these projects to ensure your funding continues to make the greatest impact. You can explore the full list on our [Impact Projects](https://ecologi.com/projects) page.
 
-### 🌱 Tree-planting
+## API capabilities
 
-We fund the planting of trees all over the world through our [trusted reforestation partners](https://ecologi.com/articles/blog/get-to-know-our-reforestation-partners). Working in conjunction with organisations that plant a diverse mix of ecologically-appropriate species, these projects enhance local biodiversity and help to support local communities through direct employment, gender empowerment, education and stewardship opportunities. We support planting sites in around 15 countries, which means that your funding is divided between our active projects across the world. Find out more about tree locations [here](https://ecologi.com/articles/blog/where-are-my-trees).
-
----
-
-_[Have a look at our supported carbon avoidance and reforestation projects](https://ecologi.com/projects)_
-
-_With every Ecologi impact account you’ll also get your very own impact profile. This allows you to track your climate action, grow your own virtual forest, and set low-carbon goals._
-
-## Ecologi APIs
-
-Our APIs provide a simple and easy-to-use way for you to automate the purchase of trees or carbon credits, directly from your application or service. You can also use our APIs to directly access your impact statistics and gain real-time insights and data on your total impact, total tonnes of avoidance, and total number of trees planted.
-
-| Purchasing Impact API | Reporting API                      |
-| --------------------- | ---------------------------------- |
-| Buy trees             | Get all impact                     |
-| Buy carbon avoidance  | Get total tonnes of CO~2~e removed |
-|                       | Get total number of trees planted  |
+| **Capability** | **API** | **What it does** | **Cost** |
+| --- | --- | --- | --- |
+| Fund tree planting | [POST] Purchasing Impact API | Fund reforestation projects by purchasing trees | GBP £0.60 / USD $0.89 / EUR €0.80 / AUD A$1.34 / CAD CA$1.24 per tree |
+| Fund carbon avoidance | [POST] Purchasing Impact API | Fund certified carbon avoidance projects | GBP £9.45 / USD $12.50 / EUR €11.20 / AUD A$18.90 / CAD CA$16.40 per tonne CO₂e |
+| Fund carbon removals | [POST] Purchasing Impact API | Fund permanent carbon removal projects | GBP £9.45 / USD $12.50 / EUR €11.20 / AUD A$18.90 / CAD CA$16.40 per tonne CO₂e |
+| Fund habitat restoration | [POST] Purchasing Impact API | Protect or restore natural habitats and ecosystems | GBP £5.00 / USD $0.16 / EUR €0.14 / AUD A$0.23 / CAD CA$0.20 per m² |
+| Retrieve total impact | [GET] Reporting API | Get total funded climate and nature impact | Free |
+| Retrieve CO₂e avoided | [GET] Reporting API | Get total tonnes of CO₂e avoided | Free |
+| Retrieve CO₂e removed | [GET] Reporting API | Get total tonnes of CO₂e permanently removed | Free |
+| Retrieve trees planted | [GET] Reporting API | Get total number of trees funded | Free |
+| Retrieve habitat restored | [GET] Reporting API | Get total area of habitat and ecosystem restored | Free |
 
 ### Read the docs
 
 ⬅️ Select the **Public API Docs** menu item on the left to get started.
 
-### ⚡️ Shopify and Zapier integrations
+## Support
 
-We have plugins for both Shopify and Zapier, allowing you to fund reforestation projects automatically for every sale you make.
-
-[Read more about our integrations](https://ecologi.com/articles/product/automatic-tree-planting-via-shopify)
-
-## We’re here to help
-
-If you have any questions, please get in touch and let us know how we can help at [support@ecologi.com](mailto:support@ecologi.com).
-
-🌳 Happy API-ing 🌳
+If you have any questions or need help integrating the API, contact us at [support@ecologi.com](mailto:support@ecologi.com).
