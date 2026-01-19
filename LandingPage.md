@@ -23,8 +23,8 @@ All projects meet stringent climate, nature, and social criteria. For each impac
 | --- | --- | --- | --- |
 | Fund tree planting | [POST] Purchasing Impact API | Fund reforestation projects by purchasing trees | GBP £0.60 / USD $0.89 / EUR €0.80 / AUD A$1.34 / CAD CA$1.24 per tree |
 | Fund carbon avoidance | [POST] Purchasing Impact API | Fund certified carbon avoidance projects | GBP £9.45 / USD $12.50 / EUR €11.20 / AUD A$18.90 / CAD CA$16.40 per tonne CO₂e |
-| Fund carbon removals | [POST] Purchasing Impact API | Fund permanent carbon removal projects | GBP £9.45 / USD $12.50 / EUR €11.20 / AUD A$18.90 / CAD CA$16.40 per tonne CO₂e |
-| Fund habitat restoration | [POST] Purchasing Impact API | Protect or restore natural habitats and ecosystems | GBP £5.00 / USD $0.16 / EUR €0.14 / AUD A$0.23 / CAD CA$0.20 per m² |
+| Fund carbon removals | [POST] Purchasing Impact API | Fund permanent carbon removal projects | GBP £185 / USD $273.06 / EUR €233.15 / AUD A$414.45 / CAD CA$381.24 per tonne CO₂e |
+| Fund habitat restoration | [POST] Purchasing Impact API | Protect or restore natural habitats and ecosystems | GBP £5.00 / USD $7.38 / EUR €6.30 / AUD A$11.20 / CAD CA$10.30 per m² |
 | Retrieve total impact | [GET] Reporting API | Get total funded climate and nature impact | Free |
 | Retrieve CO₂e avoided | [GET] Reporting API | Get total tonnes of CO₂e avoided | Free |
 | Retrieve CO₂e removed | [GET] Reporting API | Get total tonnes of CO₂e permanently removed | Free |

@@ -348,7 +348,7 @@ paths:
                 properties:
                   amount:
                     type: number
-                    example: 2.50
+                    example: 1.85
                     description: The total cost of this transaction
                   currency:
                     type: string
@@ -389,7 +389,7 @@ paths:
               examples:
                 10KG carbon removal purchased:
                   value:
-                    amount: 2.50
+                    amount: 1.85
                     currency: GBP
                     tileUrl: "https://ecologi.com/business-name?tileId=abc123"
                     name: Our valued customer 'X' for order 'Y'
@@ -465,7 +465,7 @@ paths:
                 properties:
                   amount:
                     type: number
-                    example: 1.25
+                    example: 25
                     description: The total cost of this transaction
                   currency:
                     type: string
@@ -506,7 +506,7 @@ paths:
               examples:
                 5m² habitat restoration purchased:
                   value:
-                    amount: 1.25
+                    amount: 25
                     currency: GBP
                     tileUrl: "https://ecologi.com/business-name?tileId=xyz789"
                     name: Our valued customer 'X' for order 'Y'
